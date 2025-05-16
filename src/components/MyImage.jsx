@@ -5,7 +5,7 @@ export const MyImage = ({nr,name,id}) => {
     const url=`https://picsum.photos/id/${nr}/200/300`
   return (
     <div style={{display:"flex",alignItems:"center",justifyContent:"center",borderRadius:"5px"}}>
-      <img src={url}  alt="" />
+      <img src={url} style={{width:"100%" , height:"150px"}} alt="" />
     </div>
   )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { BiHappyAlt } from "react-icons/bi";
 import { FaRegFaceSadCry } from "react-icons/fa6";
+import { MyMood } from './MyMood';
 
 
 export const Togggle = () => {
@@ -10,8 +11,11 @@ export const Togggle = () => {
         fontSize:"90px"
     }
   return (
+    <>
     <div style={{display:"flex",alignItems:"center", justifyContent:"center"}}>
       <button onClick={()=>setIsHappy(!isHappy)} style={{height:"auto",width:"auto"}}>{isHappy ? <BiHappyAlt style={{...iconStyle,color:"green"}}/> : <FaRegFaceSadCry style={{...iconStyle,color:"red"}}/>}</button>
     </div>
+    <MyMood isHappy={isHappy}/>
+    </>
   )
 }
